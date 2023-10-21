@@ -5,8 +5,8 @@ import { BsSearch } from 'react-icons/bs';
 export default function Header() {
   return (
     <>
-      <header className='header-top-strip py-3'>
-        <div className='container-xxl'>
+      <header className='header-top-strip py-2'>
+        <div className='container-xxl '>
           <div className='row'>
             <div className='col-6'>
               <p className='text-white mb-0'>Entrega grátis para pedidos acima de R$ 199</p>
@@ -74,8 +74,32 @@ export default function Header() {
         <div className='container-xxl'>
           <div className='row'>
             <div className='col-12'>
-              <div className='menu-bottom d-flex align-items-center'>
-                <div></div>
+              <div className='menu-bottom d-flex align-items-center gap-30'>
+                <div>
+                  <div className="dropdown">
+                    <button className="btn btn-secondary dropdown-toggle bg-transparent border-0 gap-15 d-flex align-items-center me-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src='images/menu.svg' alt='menu' ></img>
+                      <span className=' d-inline-block'>Categorias</span>
+                    </button>
+                    <ul className="dropdown-menu">
+                      <li>
+                        <Link className="dropdown-item text-white" to="#">
+                          Action
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="dropdown-item text-white" to="#">
+                          Another action
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="dropdown-item text-white" to="#">
+                          Something else here
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
                 <div className='menu-links'>
                   <div className='d-flex align-items-center gap-15'>
                     <NavLink className='text-white' to='/'>Home</NavLink>
